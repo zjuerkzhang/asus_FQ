@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#create a new chain named SHADOWSOCKS
+iptables -t nat -nL|grep SHADOWSOCKS
+if [ $? -ne 0 ]
+then
+    iptables -t nat -N SHADOWSOCKS
+else
+    iptables -t nat -F SHADOWSOCKS
+fi
+
+

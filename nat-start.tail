@@ -1,0 +1,10 @@
+
+
+#Anything else should be ignore
+iptables -t nat -A SHADOWSOCKS -p tcp -j RETURN
+
+
+# Apply the rules
+iptables -t nat -A PREROUTING -p tcp -j SHADOWSOCKS
+
+
