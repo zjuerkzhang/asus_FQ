@@ -6,7 +6,7 @@
 
 ## Pre-condition
 #### 路由器端
-- dnscrypt-proxy: 为dnsmasq提供无污染的DNS查询。其对应服务器可以使用现有的，也可以在VPS上配置dnscrypt-wrapper来提供服务。
+- [dnscrypt-proxy](https://github.com/jedisct1/dnscrypt-proxy): 为dnsmasq提供无污染的DNS查询。其对应服务器可以使用现有的，也可以在VPS上配置[dnscrypt-wrapper](https://github.com/cofyc/dnscrypt-wrapper)来提供服务。
 - ss-redir: 为路由器下属的局域网提供透明代理，由iptables的规则表决定哪些IP地址使用该透明代理。
 - dig: 虽然本工具内的nat-start.basic已经内置了google, facebook等主要网站的iptables配置列表，但是对于一些域名地址，仍然需要通过dig来获取IP地址，然后生成iptables配置。
 
