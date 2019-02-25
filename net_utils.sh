@@ -4,7 +4,7 @@ dnsmasq_file=dnsmasq.conf.add
 nat_file=nat-start
 ip_file=ips.list
 ip_filter=ips.filter
-site_fiile=sites.list.merge
+site_file=sites.list.merge
 dns_server=`cat dns.server`
 
 cd /home/pi/asus
@@ -15,7 +15,7 @@ rm -f $ip_file
 
 #wget -q https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/dnsmasq.conf -O dnsmasq.conf.tmp
 
-sites=`cat $site_fiile|grep -v "^$"|grep -v "#"`
+sites=`cat $site_file|grep -v "^$"|grep -v "#"`
 
 for site in $sites
 do
